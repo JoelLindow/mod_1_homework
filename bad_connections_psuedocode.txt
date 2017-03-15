@@ -1,24 +1,24 @@
-Pseudo Code - Bad Connection
+#Pseudo Code - Bad Connection
 
-First Greeting should be "HELLO, THIS IS A GROCERY STORE"
-  Caller / User should have an opportunity to input a question or say something.
+#First Greeting should be "HELLO, THIS IS A GROCERY STORE"
+#  Caller / User should have an opportunity to input a question or say something.
 
-ALL RESPONSES FROM THE PROGRAM SHOULD BE IN CAPITALS, INDICATING YELLING (bad connection).
+#ALL RESPONSES FROM THE PROGRAM SHOULD BE IN CAPITALS, INDICATING YELLING (bad connection).
 
-Response to first question asked by user should be "I AM HAVING A HARD TIME HEARING YOU".
-  There should be a question counter (check for question mark on the input)
+#Response to first question asked by user should be "I AM HAVING A HARD TIME HEARING YOU".
+#  There should be a question counter (check for question mark on the input)
 
-Response to second question asked by user should be "NO, THIS IS NOT A PET STORE"
-  ^^ This will happen after the question counter hits a value of 2
+#Response to second question asked by user should be "NO, THIS IS NOT A PET STORE"
+#  ^^ This will happen after the question counter hits a value of 2
 
-If the input is blank (an empty string response) the response to screen should be "HELLO?"
+#If the input is blank (an empty string response) the response to screen should be "HELLO?"
    ^^ No limit to amount of times this response can be given to empty input from user
 
-Add a "Goodbye Counter"
-If user says goodbye! once the response should be "I AM HAVING A HARD TIME HEARING YOU"
-If user says goodbye! twice the response should be "ANYTHING ELSE I CAN HELP WITH?"
-If user says goodbye! three times the response should be "THANK YOU FOR CALLING"
+#Add a "Goodbye Counter"
+#If user says goodbye! once the response should be "I AM HAVING A HARD TIME HEARING YOU"
+#If user says goodbye! twice the response should be "ANYTHING ELSE I CAN HELP WITH?"
+#If user says goodbye! three times the response should be "THANK YOU FOR CALLING"
 
-After 3 goodbye!'s and responses from program, the program should end.
+#After 3 goodbye!'s and responses from program, the program should end.
 
-EDITED VER 2
+#EDITED VER 2
