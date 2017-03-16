@@ -23,7 +23,7 @@ puts "HELLO, THIS IS A GROCERY STORE"
 while goodbye_counter < 2
     input = gets.chomp
         if input == "GOODBYE!"
-            if goodbye_counter == 0 
+            if goodbye_counter == 0
                 goodbye_counter =+ 1
                 puts "ANYTHING ELSE I CAN HELP YOU WITH?"
             else
@@ -34,7 +34,7 @@ while goodbye_counter < 2
             puts "I AM HAVING A HARD TIME HEARING YOU."
         elsif input_has_upcase?(input)
             puts "NO, THIS IS NOT A PET STORE"
-      
+
         elsif input == ""
             puts "HELLO?!"
         end
