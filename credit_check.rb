@@ -1,50 +1,41 @@
-# card_number = "4929735477250543"
-# valid = false
-#
-# account = card_number.split("")
-# check_digit = account.pop #<--- mutates array named account
-#
-# account.each_with_index do |x, idx|
-#
-# end
-#
-#
-# puts check_digit
-# puts account
-#
-# # Your Luhn Algorithm Here
-#
-# # Output
-# ## If it is valid, print "The number is valid!"
-# ## If it is invalid, print "The number is invalid!"
+require 'pry'
 
-#
-# ADAMSCODE BEGINS
-#
-# card_number = "4929735477250543"
-#
-# valid = false
-#
-# x = -1
-# until card_number[x] == nil
-#  digit = card_number[x].to_i
-#  if x.even?
-#    doubled_digit = digit * 2
-#      if doubled_digit > 9
-#        doubled_string = doubled_digit.to_s
-#        separated_digit_string_1 = doubled_string[0]
-#        separated_digit_string_2 = doubled_string[1]
-#        separated_digit_summed = separated_digit_string_1.to_i + separated_digit_string_2.to_i
-#        print separated_digit_summed
-#      else
-#        print doubled_digit
-#      end
-#  else
-#    print digit
-#  end
-#  x += -1
-# end
-#
-# # ADAMS CODE ENDS
+credit_card_number = "5541808923795240"
+prep_card_to_check = credit_card_number.split("").reverse!
+doubled_numbers = []
+checking_number = -1
 
-# CARLS CODE BEGINS
+  while checking_number != prep_card_to_check.length
+      if checking_number.odd?
+        odd_digits = prep_card_to_check[checking_number].to_i * 2
+      elsif odd_digits.to_i > 9       #<---
+        reduced_digits = (odd_digits - 9)
+        doubled_numbers << reduced_digits
+      else  doubled_numbers << odd_digits
+      end
+
+      if checking_number.even?
+        even_digits = prep_card_to_check[checking_number]
+      end
+
+
+processed_list_of_numbers = doubled_numbers.map do |x|
+                             x.to_i
+                            end
+
+sum_of_processed = processed_list_of_numbers.inject(:+)
+
+# binding.pry
+
+if (sum_of_processed % 10) == 0
+  puts ""
+  puts "The result is:"
+  puts "This Credit Card Number Is Valid!"
+else
+  puts ""
+  puts "The result is:"
+  puts "This Credit Card Number Is Not Valid. Call The Police!"
+end
+
+# binding.pry
+""
